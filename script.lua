@@ -162,14 +162,14 @@ while true do
         if recipe == nil then
           print(string.format("No recipe found for %s / %s, recipe not found", itemname, damage))
         else
-          print(string.format("%s/%s: Have %s, Need %s ", itemname, damage, stocksize, keepsize))
- 
+          
           -- Request that the AE2 system craft the recipe. Returns a monitor object 
           -- Note that if we don't have enough items in the system to actually craft the amount requested
           -- we have no way of finding that out, the API just tells us that the craft was done immediately.
           
           --TEST - if the item has not been requested yet, then craft it. Otherwise skip it.
           if recipe.requesting() == 0 and busy < 6 then
+            print(string.format("%s/%s: Have %s, Need %s ", itemname, damage, stocksize, keepsize))
             monitor = recipe.request(reqsize)
           end
  
