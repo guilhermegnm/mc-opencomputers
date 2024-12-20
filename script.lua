@@ -86,6 +86,13 @@ watchitems = {
 
     -- Blocks
     ["minecraft:glass"]                 = 20000,    -- Glass
+
+    -- Performance Upgrades
+    ["mekanism:speedupgrade"]           =  1000,    -- Speed Upgrade (Mekanism)
+    ["mekanism:energyupgrade"]          =  1000,    -- Energy Upgrade (Mekanism)
+    ["nuclearcraft:upgrade/0"]          =  1000,    -- Speed Upgrade (Nuclear Craft)
+    ["nuclearcraft:upgrade/1"]          =  1000,    -- Energy Upgrade (Nuclear Craft)
+    ["enderio:item_extract_speed_upgrade"] =  1000,    -- Speed Upgrade (EnderIO)
 }
  
  
