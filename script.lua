@@ -108,7 +108,7 @@ while true do
   --TEST
   busy = 0
   for i in ipairs(cpus) do
-    if cpus[i].busy == false then
+    if cpus[i].busy == true then
         busy = busy + 1
     end
   end
