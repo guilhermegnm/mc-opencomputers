@@ -169,7 +169,7 @@ while true do
           -- we have no way of finding that out, the API just tells us that the craft was done immediately.
           
           --TEST - if the item has not been requested yet, then craft it. Otherwise skip it.
-          if recipe.requesting() == 0 then
+          if recipe.requesting() == 0 and busy < 6 then
             monitor = recipe.request(reqsize)
           end
  
