@@ -1,4 +1,6 @@
 --Modified Pastebin from ...
+
+-- Works for Enigmatica 2: Expert Unoficial (E2EU)
  
 -- Basic imports
 sides = require("sides")
@@ -17,22 +19,73 @@ rs = component.proxy("716291d0-7945-4f2c-b2a8-da201f74daec")
  
 watchitems = {
     -- Ingots
-    ["thermalfoundation:material/128"]  = 5000,     -- Copper Ingot
-    ["mekanism:ingot/1"]                = 5000,     -- Osmium Ingot
-    ["thermalfoundation:material/160"]  = 5000,     -- Steel Ingot
-    ["thermalfoundation:material/161"]  = 1000,     -- Electrum Ingot
-    ["thermalfoundation:material/162"]  = 1000,     -- Invar Ingot
-    ["thermalfoundation:material/167"]  = 1000,     -- Enderium Ingot
-    ["minecraft:iron_ingot"]            = 5000,     -- Iron Ingot
-    ["minecraft:gold_ingot"]            = 5000,     -- Gold Ingot
-    ["thermalfoundation:material/129"]  = 5000,     -- Tin Ingot
-    ["thermalfoundation:material/131"]  = 2000,     -- Lead Ingot
-    ["thermalfoundation:material/163"]  = 1000,     -- Bronze Ingot
+    ["minecraft:iron_ingot"]            =  5000,    -- Iron Ingot
+    ["minecraft:gold_ingot"]            =  5000,    -- Gold Ingot
+    ["mekanism:ingot/1"]                =  5000,    -- Osmium Ingot
+    ["thermalfoundation:material/130"]  =  5000,    -- Silver Ingot
+    ["thermalfoundation:material/128"]  =  5000,    -- Copper Ingot
+    ["thermalfoundation:material/160"]  =  5000,    -- Steel Ingot
+    ["thermalfoundation:material/161"]  =  1000,    -- Electrum Ingot
+    ["thermalfoundation:material/162"]  =  1000,    -- Invar Ingot
+    ["thermalfoundation:material/167"]  =  1000,    -- Enderium Ingot
+    ["thermalfoundation:material/129"]  =  5000,    -- Tin Ingot
+    ["thermalfoundation:material/131"]  =  2000,    -- Lead Ingot
+    ["thermalfoundation:material/163"]  =  1000,    -- Bronze Ingot
  
     -- Gems & Dusts
-    ["minecraft:redstone"]              = 20000,   -- Redstone
-    ["minecraft:dye/4"]                 = 5000,    -- Lapis Lazuli
-    ["minecraft:diamond"]               = 5000,    -- Diamond
+    ["minecraft:redstone"]              = 20000,    -- Redstone
+    ["minecraft:dye/4"]                 =  5000,    -- Lapis Lazuli
+    ["minecraft:diamond"]               =  5000,    -- Diamond
+    ["minecraft:quartz"]                = 10000,    -- Nether Quartz
+    ["appliedenergistics2:material/0"]  = 10000,    -- Certus Quartz Crystal
+    ["appliedenergistics2:material/7"]  = 10000,    -- Fluix Crystal
+    ["appliedenergistics2:material/11"] = 10000,    -- Pure Nether Quartz Crystal
+    ["appliedenergistics2:material/10"] = 10000,    -- Pure Certus Quartz Crystal
+    ["appliedenergistics2:material/12"] = 10000,    -- Pure Fluix Quartz Crystal
+    ["appliedenergistics2:material/3"]  =  5000,    -- Nether Quartz Dust
+    ["appliedenergistics2:material/2"]  =  5000,    -- Certuz Quartz Dust
+    ["appliedenergistics2:material/8"]  =  5000,    -- Fluix Dust
+
+    -- EnderIO Conduits
+    ["enderio:item_power_conduit/2"]    =  1000,    -- Ender Energy Conduit
+    ["enderio:item_item_conduit/0"]     =  1000,    -- Item Conduit
+    ["enderio:item_liquid_conduit/2"]   =  1000,    -- Ender Fluid Conduit
+    ["enderio:item_gas_conduit/2"]      =   200,    -- Ender Gas Conduit
+    ["enderio:item_me_conduit/0"]       =  1000,    -- ME Conduit
+
+    -- AE2 Components
+    ["appliedenergistics2:material/24"] =  5000,    -- Engineering Processor
+    ["appliedenergistics2:material/23"] =  5000,    -- Calculation Processor
+    ["appliedenergistics2:material/22"] =  5000,    -- Logic Processor
+    ["appliedenergistics2:material/20"] = 15000,    -- Printed Silicon
+    ["appliedenergistics2:material/18"] =  5000,    -- Printed Logic Circuit
+    ["appliedenergistics2:material/17"] =  5000,    -- Printed Engineering Circuit
+    ["appliedenergistics2:material/16"] =  5000,    -- Printed Calculation Circuit
+    ["appliedenergistics2:interface"]   =  1000,    -- ME Interface
+    ["appliedenergistics2:part/240"]    =  1000,    -- ME Import Bus
+    ["appliedenergistics2:part/260"]    =  1000,    -- ME Export Bus
+    ["appliedenergistics2:part/16"]     =  5000,    -- ME Glass Cable
+    ["appliedenergistics2:material/58"] =  1000,    -- Pattern Expansion Card
+    ["appliedenergistics2:material/30"] =  1000,    -- Acceleration Card
+
+    -- Mekanism Components
+    ["mekanism:compressedredstone"]     =  1000,    -- Compressed Redstone
+    ["mekanism:compressedcarbon"]       =  1000,    -- Compressed Carbon
+    ["mekanism:compresseddiamond"]      =  1000,    -- Compressed Diamond
+
+
+    -- Metal Plates
+    ["thermalfoundation:material/32"]   =  1000,    -- Iron Plate
+    ["thermalfoundation:material/33"]   =  1000,    -- Gold Plate
+    ["thermalfoundation:material/320"]  =  5000,    -- Copper Plate
+    ["thermalfoundation:material/352"]  =  5000,    -- Steel Plate
+    ["thermalfoundation:material/354"]  =  1000,    -- Invar Plate
+    ["thermalfoundation:material/321"]  =  5000,    -- Tin Plate
+    ["thermalfoundation:material/323"]  =  1000,    -- Lead Plate
+    ["thermalfoundation:material/355"]  =  1000,    -- Bronze Plate
+
+    -- Blocks
+    ["minecraft:glass"]                 = 20000,    -- Glass
 }
  
  
