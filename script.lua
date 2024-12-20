@@ -129,6 +129,7 @@ while true do
                 busy = busy + 1
             end
         end
+        print(string.format("CPUs busy atm: %s", busy))
  
       -- String parsing to get out the damage/metadata value from our string
       -- thermalfoundation:material/2048 becomes
