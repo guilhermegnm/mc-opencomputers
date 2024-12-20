@@ -104,12 +104,25 @@ while true do
  
   -- Check if any CPU's are currently being used.
   cpus = ae2.getCpus()
-  busy = false
-  for i in ipairs(cpus) do busy = cpus[i].busy or busy end
+
+  --TEST
+  busy = 0
+  for i in ipairs(cpus) do
+    if cpus[i].busy == false then
+        busy = busy + 1
+    end
+  end
+
+  -- OFF FOR NOW
+  --busy = false
+  --for i in ipairs(cpus) do busy = cpus[i].busy or busy end
  
   -- If no CPU's are being used, and we're not getting a redstone signal from manual kill lever
   -- then we will run a loop of itemchecking.
-  if rs_input > 0 and busy == false then
+
+  -- OFF FOR NOW
+  --if rs_input > 0 and busy == false then
+  if rs_input > 0 and busy < 6 then
     
     -- Iterate through each item in watchitems table
     for itemname,keepsize in pairs(watchitems) do
@@ -154,13 +167,19 @@ while true do
           -- Request that the AE2 system craft the recipe. Returns a monitor object 
           -- Note that if we don't have enough items in the system to actually craft the amount requested
           -- we have no way of finding that out, the API just tells us that the craft was done immediately.
-          monitor = recipe.request(reqsize)
+          
+          --TEST - if the item has not been requested yet, then craft it. Otherwise skip it.
+          if recipe.requesting() == 0 then
+            monitor = recipe.request(reqsize)
+          end
  
           -- Wait for the craft to complete
-          while monitor.isDone() == false and monitor.isCanceled() == false do
-            os.sleep(5)
-          end
-          print(string.format("%s/%s: crafted %s", itemname,damage,reqsize))
+
+          --while monitor.isDone() == false and monitor.isCanceled() == false do
+          --  os.sleep(5)
+          --end
+          --print(string.format("%s/%s: crafted %s", itemname,damage,reqsize))
+        
         end
       end
  
