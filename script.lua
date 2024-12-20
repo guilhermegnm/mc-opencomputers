@@ -102,16 +102,9 @@ while true do
   -- Check to see if we're getting redstone input from the top.  
   rs_input = rs.getInput(sides.top)
  
-  -- Check if any CPU's are currently being used.
-  cpus = ae2.getCpus()
+  
 
-  --TEST
-  busy = 0
-  for i in ipairs(cpus) do
-    if cpus[i].busy == true then
-        busy = busy + 1
-    end
-  end
+  
 
   -- OFF FOR NOW
   --busy = false
@@ -122,10 +115,20 @@ while true do
 
   -- OFF FOR NOW
   --if rs_input > 0 and busy == false then
-  if rs_input > 0 and busy < 6 then
+  if rs_input > 0 then
     
     -- Iterate through each item in watchitems table
     for itemname,keepsize in pairs(watchitems) do
+
+      --TEST
+      -- Check if any CPU's are currently being used.
+        cpus = ae2.getCpus()
+        busy = 0
+        for i in ipairs(cpus) do
+            if cpus[i].busy == true then
+                busy = busy + 1
+            end
+        end
  
       -- String parsing to get out the damage/metadata value from our string
       -- thermalfoundation:material/2048 becomes
