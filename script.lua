@@ -173,9 +173,16 @@ while true do
           
           --TEST - if the item has not been requested yet, then craft it. Otherwise skip it.
           if recipe.requesting() == 0 and busy < 6 then
-            print(string.format("%s/%s: Have %s, Need %s ", itemname, damage, stocksize, keepsize))
+
+            item_label = recipe.getItemStack().label
+            print(string.format("%s: Have %s, Need %s ", item_label, stocksize, keepsize))
+            
             monitor = recipe.request(reqsize)
+
+            os.sleep(5)
           end
+
+
  
           -- Wait for the craft to complete
 
@@ -188,7 +195,7 @@ while true do
       end
  
       -- Wait a bit so as not to hammer to the system
-      os.sleep(5)
+      os.sleep(1)
     end
   end  
  
